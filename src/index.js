@@ -1,14 +1,16 @@
-import express from "express"
+import express, { json } from "express"
 // import jwt from "jsonwebtoken"
 import "dotenv/config"
 
+import indexRouter from "./routes/index"
+import loginRouter from "./routes/login"
+
 const app = express()
 
-const user = {
-  username: "Oleg"
-}
+app.use(json({ extended: true }))
 
-app.get("/", (req, res) => res.send(`Logged in as, ${user.username}`))
+app.use("/api", indexRouter)
+app.use("/api", loginRouter)
 
 const port = 3000
 app.listen(port, () => console.log(`Server listening at: ${port}!`))

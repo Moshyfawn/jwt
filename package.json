@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Moshyfawn/jwt/issues"
   },
-  "homepage": "https://github.com/Moshyfawn/jwt#readme"
+  "homepage": "https://github.com/Moshyfawn/jwt#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }
